@@ -77,9 +77,6 @@ const Header = () => {
         <Logo />
         <div className={styles.navigation}>
           <NavList />
-//           <Link to={createRandomDate()} className={styles.button}>
-//             RANDOM PICTURE
-//           </Link>
         </div>
       </div>
     </header>
