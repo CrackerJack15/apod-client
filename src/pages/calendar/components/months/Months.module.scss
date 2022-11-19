@@ -1,0 +1,24 @@
+@import "../../../../styles/Mixins.module.scss";
+@import "../../../../styles/Variables.module.scss";
+
+.container {
+  padding: 12px 0;
+  border-bottom: 1px solid $secondary-text;
+}
+
+.inner {
+  @include flex-box(space-between, center);
+  width: $desktop-container;
+  margin: 0 auto;
+}
+
+.button {
+  @include font(20px, 24px);
+  color: $secondary-text;
+  transition: color 0.2s;
+
+  &:hover,
+  &.active {
+    color: $primary-text;
+  }
+}

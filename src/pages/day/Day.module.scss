@@ -1,0 +1,11 @@
+@import "../../styles/Mixins.module.scss";
+@import "../../styles/Variables.module.scss";
+
+.main {
+  width: $desktop-container;
+  margin: 40px auto;
+}
+
+.container {
+  @include flex-box(space-between, flex-start);
+}

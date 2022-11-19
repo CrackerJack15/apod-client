@@ -1,0 +1,22 @@
+@import "../../../styles/Mixins.module.scss";
+
+.container {
+  width: 1460px;
+}
+
+.days-container {
+  @include flex-box(flex-start, flex-start);
+  flex-wrap: wrap;
+  gap: 40px;
+  max-height: 77vh;
+  margin-top: 24px;
+
+  overflow-y: scroll;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

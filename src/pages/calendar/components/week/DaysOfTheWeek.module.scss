@@ -1,0 +1,17 @@
+@import "../../../../styles/Mixins.module.scss";
+@import "../../../../styles/Variables.module.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 39px;
+  width: $desktop-container;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: $primary;
+}
+
+.day {
+  width: 218px;
+  text-align: right;
+}

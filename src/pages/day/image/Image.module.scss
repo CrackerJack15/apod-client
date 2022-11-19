@@ -1,0 +1,13 @@
+@import "../../../styles/Mixins.module.scss";
+
+.container {
+  @include flex-center;
+  width: 1010px;
+  height: 800px;
+  background-color: $secondary;
+}
+
+.img {
+  max-width: 930px;
+  max-height: 720px;
+}

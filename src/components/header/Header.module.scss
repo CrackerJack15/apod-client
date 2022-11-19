@@ -1,0 +1,69 @@
+@import "../../styles/Variables.module.scss";
+@import "../../styles/Mixins.module.scss";
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: $primary;
+}
+
+.container {
+  @include flex-box(space-between, center);
+  width: $desktop-container;
+  margin: 0 auto;
+  padding: 4px 0;
+}
+
+.logo {
+  @include flex-box(space-between, center);
+
+  & > p {
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $primary-text;
+  }
+}
+
+.navigation {
+  @include flex-box(flex-start, center);
+}
+
+.nav-list {
+  @include flex-box(space-between, center);
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 24px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.nav-link {
+  color: $secondary-text;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $primary-text;
+  }
+}
+
+.active {
+  color: $primary-text;
+}
+
+.button {
+  padding: 12px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $primary-text;
+  background-color: $secondary;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #292929;
+  }
+}

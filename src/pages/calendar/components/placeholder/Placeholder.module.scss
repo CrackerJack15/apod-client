@@ -1,0 +1,6 @@
+@import "../../../../styles/Mixins.module.scss";
+@import "../../../../styles/Variables.module.scss";
+
+.container {
+  @include box(218px);
+}

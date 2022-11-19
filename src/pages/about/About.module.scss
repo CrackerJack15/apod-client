@@ -1,0 +1,51 @@
+@import "../../styles/Mixins.module.scss";
+@import "../../styles/Variables.module.scss";
+
+.main {
+  @include flex-box(flex-start, flex-start);
+  gap: 40px;
+  margin: 40px 80px;
+}
+
+.left {
+  position: sticky;
+  top: 152px;
+  margin-top: 40px;
+}
+
+.right {
+  width: 1160px;
+  margin-top: 120px;
+}
+
+.section {
+  width: 704px;
+  margin-top: 64px;
+
+  &--reset {
+    margin: 0;
+  }
+}
+
+.contents {
+  width: 410px;
+  margin-top: 40px;
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    color: $secondary-text;
+    transition: color 0.2s;
+
+    &:hover,
+    &.active {
+      color: $primary-text;
+    }
+  }
+}
+
+.info-list {
+  margin: 24px 0;
+}

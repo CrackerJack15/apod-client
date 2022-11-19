@@ -1,0 +1,28 @@
+@import "../../../../styles/Mixins.module.scss";
+@import "../../../../styles/Variables.module.scss";
+
+.container {
+  width: 260px;
+}
+
+.img-container {
+  @include box(260px);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.img {
+  @include box(260px);
+  object-fit: cover;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.title {
+  @include font(18px, 24px);
+  width: 260px;
+  margin-bottom: 16px;
+}

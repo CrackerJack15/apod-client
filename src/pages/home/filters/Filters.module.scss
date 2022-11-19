@@ -1,0 +1,21 @@
+@import "../../../styles/Mixins.module.scss";
+@import "../../../styles/Variables.module.scss";
+
+.container {
+  width: 260px;
+}
+
+.button {
+  @include font(20px, 24px);
+  @include box(212px, 40px);
+  margin-top: 24px;
+  padding: 8px 16px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid $primary-text;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}

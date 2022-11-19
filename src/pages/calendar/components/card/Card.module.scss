@@ -1,0 +1,26 @@
+@import "../../../../styles/Mixins.module.scss";
+@import "../../../../styles/Variables.module.scss";
+
+.container {
+  @include flex-box(space-between, flex-start);
+  flex-direction: column;
+  width: 218px;
+}
+
+.img-container {
+  overflow: hidden;
+}
+
+.img {
+  @include box(218px);
+  object-fit: cover;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.title {
+  margin: 16px 0;
+}

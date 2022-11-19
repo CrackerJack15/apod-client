@@ -1,0 +1,39 @@
+@import "./styles/Variables.module.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $primary;
+}
+
+body,
+a,
+button,
+input,
+option {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-text;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}

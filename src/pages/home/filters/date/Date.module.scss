@@ -1,0 +1,9 @@
+@import "../../../../styles/Mixins.module.scss";
+
+.dropdown-container {
+  @include flex-box(flex-start, flex-start);
+}
+
+.margin {
+  margin-bottom: 16px;
+}

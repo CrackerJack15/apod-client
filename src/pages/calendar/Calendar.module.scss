@@ -1,0 +1,17 @@
+@import "../../styles/Mixins.module.scss";
+@import "../../styles/Variables.module.scss";
+
+.pickers {
+  position: sticky;
+  top: 72px;
+  background-color: $primary;
+  z-index: 5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0 39px;
+  width: $desktop-container;
+  margin: 20px auto;
+}

@@ -1,0 +1,30 @@
+@import "../../../../styles/Mixins.module.scss";
+@import "../../../../styles/Variables.module.scss";
+
+.container {
+  padding: 12px 0;
+  border-top: 1px solid $secondary-text;
+  border-bottom: 1px solid $secondary-text;
+  overflow-x: hidden;
+}
+
+.years {
+  @include flex-box(flex-start, center);
+  width: $desktop-container;
+  margin: 0 auto;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: $secondary-text;
+}
+
+.button {
+  @include font(20px, 24px);
+  margin-right: 64px;
+  color: $secondary-text;
+  transition: color 0.2s;
+
+  &:hover,
+  &.active {
+    color: $primary-text;
+  }
+}

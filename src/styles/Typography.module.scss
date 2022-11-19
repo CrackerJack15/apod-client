@@ -1,0 +1,47 @@
+@import "./Mixins.module.scss";
+@import "./Variables.module.scss";
+
+.headlineLarge {
+  @include font(40px, 48px);
+}
+
+.headlineMedium {
+  @include font(32px, 40px);
+
+  &--margin {
+    margin-bottom: 24px;
+  }
+}
+
+.headlineSmall {
+  @include font(25px, 32px);
+}
+
+.headlineMini {
+  @include font(22px, 28px);
+}
+
+.body {
+  @include font(18px, 26px);
+
+  &--margin {
+    margin-bottom: 12px;
+  }
+
+  &--link {
+    text-decoration: underline;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $secondary-text;
+    }
+  }
+}
+
+.labelLarge {
+  @include font(20px, 24px);
+}
+
+.labelMedium {
+  @include font(16px, 24px);
+}
