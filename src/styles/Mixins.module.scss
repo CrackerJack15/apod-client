@@ -28,3 +28,26 @@
   font-weight: $font-weight;
   color: $color;
 }
+
+@mixin font-size($value) {
+  @if $value == small-label {
+    font-size: 12px;
+    line-height: 16px;
+  } @else if $value == label {
+    font-size: 14px;
+    line-height: 20px;
+  } @else if $value == text {
+    font-size: 15px;
+    line-height: 24px;
+  } @else if $value == base {
+    font-size: 16px;
+    line-height: 24px;
+  } @else if $value == title {
+    font-size: 18px;
+    line-height: 24px;
+  } @else if $value == headline {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+}

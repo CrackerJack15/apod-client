@@ -1,5 +1,5 @@
 // Components
-import Header from "./components/header/Header";
+import Header from "./components/header";
 import Router from "./pages/Router";
 
 // Styles
