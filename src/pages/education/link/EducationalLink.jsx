@@ -2,9 +2,6 @@
 import styles from "./EducationalLink.module.scss";
 import typography from "../../../styles/Typography.module.scss";
 
-// Assets
-import arrowLink from "../../../assets/icons/arrow-link.svg";
-
 function EducationalLink({ link, title, description }) {
   return (
     <a
@@ -21,7 +18,7 @@ function EducationalLink({ link, title, description }) {
           {description}
         </p>
       </div>
-      <img src={arrowLink} alt="arrow" />
+      <img src="/icons/arrow-link.svg" alt="arrow" />
     </a>
   );
 }

@@ -12,10 +12,6 @@ import { createDayURL } from "../../../helpers/functions";
 import styles from "./Info.module.scss";
 import typography from "../../../styles/Typography.module.scss";
 
-// Assets
-import arrowLeft from "../../../assets/icons/arrow-left.svg";
-import arrowRight from "../../../assets/icons/arrow-right.svg";
-
 const Info = ({ title, date, creditLinks, explanation }) => {
   const credits = getCredits(creditLinks);
 
@@ -31,10 +27,10 @@ const Info = ({ title, date, creditLinks, explanation }) => {
       </div>
       <div>
         <Link to={`/day/${createDayURL(date, -1)}`} className={styles.button}>
-          <img src={arrowLeft} alt="arrow left" />
+          <img src="/icons/arrow-left.svg" alt="arrow left" />
         </Link>
         <Link to={`/day/${createDayURL(date, 1)}`} className={styles.button}>
-          <img src={arrowRight} alt="arrow right" />
+          <img src="/icons/arrow-right.svg" alt="arrow right" />
         </Link>
       </div>
       <div>

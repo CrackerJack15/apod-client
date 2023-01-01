@@ -3,9 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 // Styles
 import styles from "./Header.module.scss";
 
-// Assets
-import LogoSVG from "../../assets/icons/logo.svg";
-
 function createRandomDate() {
   const yearNow = new Date(Date.now()).getFullYear();
 
@@ -86,7 +83,7 @@ const Header = () => {
 const Logo = () => {
   return (
     <Link className={styles.logo} to="/">
-      <img src={LogoSVG} alt="logo" />
+      <img src="/icons/logo.svg" alt="logo" />
       <p>ASTRONOMY PICTURE OF THE DAY</p>
     </Link>
   );

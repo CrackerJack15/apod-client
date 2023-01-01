@@ -36,6 +36,7 @@ function Home() {
       date.year
     }`
   );
+
   const [archive, setArchive] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);

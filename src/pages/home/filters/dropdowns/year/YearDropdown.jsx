@@ -3,9 +3,6 @@ import { useState } from "react";
 // Styles
 import styles from "./Dropdown.module.scss";
 
-// Assets
-import chevron from "../../../../../assets/icons/chevron.svg";
-
 // Helpers
 import { createYearsArray } from "../../../../../helpers/functions";
 
@@ -17,7 +14,7 @@ const YearDropdown = ({ selectedItem, yearHandler }) => {
   return (
     <div>
       <button type="button" className={styles.dropdown} onClick={toggle}>
-        {selectedItem} <img src={chevron} alt="chevron" />
+        {selectedItem} <img src="/icons/chevron.svg" alt="chevron" />
       </button>
       {isOpen ? (
         <ul role="listbox" tabIndex={-1} className={styles.listbox}>

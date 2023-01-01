@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 
 // Pages
-import Home from "./home/Home";
-import Day from "./day/Day";
-import Calendar from "./calendar/Calendar";
-import Education from "./education/Education";
-import About from "./about/About";
+import Home from "./home";
+import Day from "./day";
+import Calendar from "./calendar";
+import Education from "./education";
+import About from "./about";
 
 function Router() {
   return (

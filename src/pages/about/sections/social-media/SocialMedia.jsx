@@ -5,17 +5,11 @@ import Dropdown from "./dropdown/Dropdown";
 import styles from "./SocialMedia.module.scss";
 import typography from "../../../../styles/Typography.module.scss";
 
-// Assets
-import facebook from "../../../../assets/icons/facebook.svg";
-import discord from "../../../../assets/icons/discord.svg";
-import twitter from "../../../../assets/icons/twitter.svg";
-import instagram from "../../../../assets/icons/instagram.svg";
-
 const SocialMedia = () => {
   const data = [
     {
       id: 1,
-      img: facebook,
+      img: "/icons/facebook.svg",
       title: "Facebook",
       data: [
         {
@@ -90,7 +84,7 @@ const SocialMedia = () => {
     },
     {
       id: 2,
-      img: instagram,
+      img: "/icons/instagram.svg",
       title: "Instagram",
       data: [
         {
@@ -161,7 +155,7 @@ const SocialMedia = () => {
     },
     {
       id: 3,
-      img: twitter,
+      img: "/icons/twitter.svg",
       title: "Twitter",
       data: [
         {
@@ -212,7 +206,7 @@ const SocialMedia = () => {
     },
     {
       id: 4,
-      img: discord,
+      img: "/icons/discord.svg",
       title: "Discord",
       data: [
         {

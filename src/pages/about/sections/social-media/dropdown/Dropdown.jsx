@@ -7,9 +7,6 @@ import DropdownItem from "./DropdownItem";
 import styles from "./Dropdown.module.scss";
 import typography from "../../../../../styles/Typography.module.scss";
 
-// Assets
-import plus from "../../../../../assets/icons/plus.svg";
-
 const Dropdown = ({ img, title, data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +20,7 @@ const Dropdown = ({ img, title, data }) => {
           <h3 className={typography.headlineSmall}>{title}</h3>
         </div>
         <img
-          src={plus}
+          src="/icons/plus.svg"
           alt="plus"
           className={`${styles.plus} ${isOpen ? styles.active : ""}`}
         />
