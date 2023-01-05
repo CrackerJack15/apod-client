@@ -1,1 +1,1 @@
-export const endpoint = "http://localhost:3001/api/v1";
+export const endpoint = "https://apod-remastered-api.onrender.com/api/v1";
