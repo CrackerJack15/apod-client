@@ -1,14 +1,9 @@
 // Styles
-import typography from "../../styles/Typography.module.scss";
+import styles from "./OuterLink.module.scss";
 
 function OuterLink({ link, text }) {
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noreferrer"
-      className={`${typography.body} ${typography["body--link"]}`}
-    >
+    <a href={link} target="_blank" rel="noreferrer" className={styles.link}>
       {text}
     </a>
   );

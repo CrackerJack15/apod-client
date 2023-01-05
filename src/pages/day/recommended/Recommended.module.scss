@@ -1,9 +1,18 @@
+@import "../../../styles/Mixins.module.scss";
+
 .container {
-  margin-top: 40px;
+  width: $desktop-container;
+  margin: 0 auto;
 }
 
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 40px;
   margin-top: 24px;
+}
+
+.title {
+  @include font-size(title);
+  font-weight: 400;
 }

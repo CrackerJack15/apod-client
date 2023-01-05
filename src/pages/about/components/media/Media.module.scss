@@ -1,0 +1,75 @@
+@import "../../../../styles/Mixins.module.scss";
+
+.container {
+  position: relative;
+  margin-right: 16px;
+  margin-bottom: 24px;
+
+  &:hover .title-arrow {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.background {
+  @include flex-box(flex-start, flex-start);
+}
+
+.img-container {
+  @include flex-center;
+  @include box(48px);
+  margin-right: 16px;
+  border-radius: 8px;
+
+  &.email {
+    background-color: #cce3ff;
+  }
+
+  &.chat {
+    background-color: #fecddd;
+  }
+
+  &.read-aloud {
+    background-color: #cdfecd;
+  }
+
+  &.podcasts {
+    background-color: #fecdfe;
+  }
+
+  &.rss {
+    background-color: #ffeacc;
+  }
+}
+
+.title-container {
+  display: flex;
+  width: 160px;
+}
+
+.title {
+  @include font-size(base);
+}
+
+.title-arrow {
+  margin-left: 4px;
+  transform: translateX(-100%);
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.subtitle {
+  @include font-size(label);
+  color: $secondary-text;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.top-links {
+  position: absolute;
+  top: 26px;
+  left: 64px;
+  z-index: 5;
+}

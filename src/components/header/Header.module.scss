@@ -4,14 +4,14 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 5;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .container {
   @include flex-box(space-between, center);
   max-width: 1600px;
   margin: 0 auto;
-  padding: 4px 0;
 }
 
 .logo {

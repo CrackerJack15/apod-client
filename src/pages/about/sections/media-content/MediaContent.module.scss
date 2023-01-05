@@ -1,0 +1,7 @@
+@import "../../../../styles/Mixins.module.scss";
+
+.content-container {
+  @include flex-box(flex-start, center);
+  flex-wrap: wrap;
+  margin-top: 24px;
+}

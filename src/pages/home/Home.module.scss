@@ -2,7 +2,27 @@
 @import "../../styles/Variables.module.scss";
 
 .main {
-  @include flex-box(space-between, flex-start);
   width: $desktop-container;
   margin: 40px auto;
+}
+
+.title {
+  @include font-size(headline);
+  text-align: center;
+}
+
+.top {
+  margin-bottom: 40px;
+}
+
+.text-container {
+  @include flex-center;
+  margin-top: 16px;
+}
+
+.text {
+  @include font-size(base);
+  width: 620px;
+  text-align: center;
+  color: $secondary-text;
 }

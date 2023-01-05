@@ -43,7 +43,7 @@ function createRecommendedURL(array) {
 }
 
 function createRecommendedDates(date) {
-  let count = 4;
+  let count = 6;
   const dateObject = new Date(date);
   const items = [];
 

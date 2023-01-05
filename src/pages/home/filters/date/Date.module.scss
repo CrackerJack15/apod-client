@@ -1,9 +1,32 @@
 @import "../../../../styles/Mixins.module.scss";
 
-.dropdown-container {
-  @include flex-box(flex-start, flex-start);
+.container {
+  position: relative;
+  z-index: 5;
+  cursor: default;
 }
 
-.margin {
-  margin-bottom: 16px;
+.date-picker {
+  @include flex-box(space-between, center);
+  width: 240px;
+  padding: 10px 24px;
+  border: 1px solid $secondary;
+  border-radius: 4px;
+
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.picker {
+  @include flex-box(flex-start, center);
+}
+
+.date {
+  @include font-size(label);
+  margin-left: 16px;
+}
+
+.chevron {
+  transform: rotate(180%);
 }

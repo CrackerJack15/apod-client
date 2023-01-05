@@ -1,0 +1,11 @@
+@import "../../styles/Mixins.module.scss";
+
+.link {
+  @include font-size(text);
+  text-decoration: underline;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $primary;
+  }
+}

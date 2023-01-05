@@ -1,13 +1,37 @@
 @import "../../../styles/Mixins.module.scss";
 
 .container {
+  @include flex-box(center, center);
+}
+
+.img-container {
   @include flex-center;
-  width: 1010px;
-  height: 800px;
-  background-color: $secondary;
+  width: $desktop-container;
 }
 
 .img {
-  max-width: 930px;
-  max-height: 720px;
+  max-width: 1600px;
+  max-height: 600px;
+}
+
+.button-container {
+  @include flex-center;
+  margin: 0 100px;
+}
+
+.button {
+  @include flex-center;
+  @include box(64px);
+  border: 1px solid $secondary;
+  border-radius: 100%;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #fff;
+    background-color: $secondary;
+  }
+
+  &:active {
+    border-color: $primary;
+  }
 }

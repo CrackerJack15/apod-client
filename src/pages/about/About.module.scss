@@ -1,51 +1,66 @@
 @import "../../styles/Mixins.module.scss";
 @import "../../styles/Variables.module.scss";
 
-.main {
-  @include flex-box(flex-start, flex-start);
-  gap: 40px;
-  margin: 40px 80px;
+.container {
+  @include flex-box(space-between, flex-start);
+  width: $desktop-container;
+  margin: 40px auto;
 }
 
-.left {
+.table-of-contents {
   position: sticky;
-  top: 152px;
-  margin-top: 40px;
+  top: 104px;
 }
 
-.right {
-  width: 1160px;
-  margin-top: 120px;
+.main-content {
+  width: 950px;
+}
+
+// Sections
+
+.title {
+  @include font-size(title);
+  font-weight: 500;
+}
+
+.text {
+  @include font-size(base);
+}
+
+.content {
+  margin-top: 16px;
+}
+
+.text-container {
+  margin-bottom: 12px;
 }
 
 .section {
-  width: 704px;
-  margin-top: 64px;
-
-  &--reset {
-    margin: 0;
-  }
-}
-
-.contents {
-  width: 410px;
-  margin-top: 40px;
-
-  &__item {
-    margin-bottom: 24px;
-  }
-
-  &__link {
-    color: $secondary-text;
-    transition: color 0.2s;
-
-    &:hover,
-    &.active {
-      color: $primary-text;
-    }
-  }
+  width: 730px;
+  margin-bottom: 64px;
 }
 
 .info-list {
   margin: 24px 0;
+}
+
+// Table of contents
+
+.subtitle {
+  @include font-size(base);
+}
+
+.contents {
+  width: 290px;
+  margin-top: 16px;
+  margin-left: 12px;
+
+  &__item {
+    margin-bottom: 12px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

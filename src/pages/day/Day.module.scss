@@ -2,10 +2,12 @@
 @import "../../styles/Variables.module.scss";
 
 .main {
-  width: $desktop-container;
   margin: 40px auto;
 }
 
-.container {
-  @include flex-box(space-between, flex-start);
+.divider {
+  width: $desktop-container;
+  height: 1px;
+  margin: 40px auto;
+  background-color: $secondary;
 }

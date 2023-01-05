@@ -1,21 +1,42 @@
 @import "../../../../styles/Mixins.module.scss";
 @import "../../../../styles/Variables.module.scss";
 
-.img-container {
-  @include box(410px);
-  overflow: hidden;
-}
+.container {
+  @include box(180px);
+  position: relative;
 
-.img {
-  @include box(410px);
-  object-fit: cover;
-  transition: transform 0.4s;
-
-  &:hover {
-    transform: scale(1.1);
+  &:hover .overlay {
+    opacity: 1;
   }
 }
 
+.img {
+  @include box(180px);
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.frame {
+  @include box(180px);
+  border-radius: 4px;
+}
+
+.overlay {
+  @include flex-box(flex-end, flex-start);
+  @include box(100%);
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 12px;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
 .title {
-  margin: 16px 0;
+  @include font-size(label);
+  font-weight: 400;
+  color: #fff;
 }

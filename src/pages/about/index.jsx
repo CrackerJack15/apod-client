@@ -1,94 +1,79 @@
-import { HashLink as Link } from "react-router-hash-link";
-
 // Components
-import Acknowledgment from "./sections/acknowledgement/Acknowledgement";
-import Bookmark from "./sections/bookmark/Bookmark";
-import MediaContent from "./sections/media-content/MediaContent";
-import SocialMedia from "./sections/social-media/SocialMedia";
-import OurStory from "./sections/our-story/OurStory";
-import ImagePermissions from "./sections/image-permissions/ImagePermissions";
+import Acknowledgment from "./sections/acknowledgement";
+import Bookmark from "./sections/bookmark";
+import MediaContent from "./sections/media-content/";
+import OurStory from "./sections/our-story";
+import ImagePermissions from "./sections/image-permissions";
 
 // Styles
 import styles from "./About.module.scss";
-import typography from "../../styles/Typography.module.scss";
-import useScrollSpy from "../../hooks/useScrollSpy";
 
-const About = () => {
+function About() {
   return (
-    <main className={styles.main}>
-      <div className={styles.left}>
-        <h1 className={typography.headlineLarge}>ABOUT</h1>
+    <main className={styles.container}>
+      <aside className={styles["table-of-contents"]}>
+        <h1 className={styles.subtitle}>Table of contents</h1>
         <Contents />
-      </div>
-      <div className={styles.right}>
+      </aside>
+      <div className={styles["main-content"]}>
         <Acknowledgment />
         <Bookmark />
         <MediaContent />
-        <SocialMedia />
         <OurStory />
         <ImagePermissions />
       </div>
     </main>
   );
-};
+}
 
 function Contents() {
-  const links = [
+  const chapters = [
     {
-      title: "ACKNOWLEDGEMENT",
-      path: "/about#acknowledgement",
+      id: "acknowledgement",
+      title: "1. Acknowledgement",
     },
     {
-      title: "HOW TO BOOKMARK APOD",
-      path: "/about#bookmark",
+      id: "bookmark",
+      title: "2. How to Bookmark APOD",
     },
     {
-      title: "NEW MEDIA APOD-RELATED CONTENT",
-      path: "/about#media-content",
+      id: "media-content",
+      title: "3. New Media APOD-Related Content",
     },
     {
-      title: "SOCIAL MEDIA",
-      path: "/about#social-media",
+      id: "our-story",
+      title: "4. Our Story",
     },
     {
-      title: "OUR STORY",
-      path: "/about#our-story",
+      id: "permissions",
+      title: "5. About Image Permissions",
     },
-    {
-      title: "ABOUT IMAGE PERMISSIONS",
-      path: "/about#permissions",
-    },
-  ];
-  const ids = [
-    "acknowledgement",
-    "bookmark",
-    "media-content",
-    "social-media",
-    "our-story",
-    "permissions",
   ];
 
-  const activeId = useScrollSpy(ids, 72);
+  function handleScroll(id) {
+    const item = document.getElementById(id);
+    const yOffset = -64;
+
+    if (item) {
+      const y = item.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }
 
   return (
-    <aside className={styles.contents}>
-      <ul>
-        {links.map(({ title, path }) => {
-          return (
-            <li className={styles.contents__item} key={title}>
-              <Link
-                to={path}
-                className={`${typography.headlineMini} ${
-                  styles.contents__link
-                } ${path.includes(activeId) ? styles.active : ""}`}
-              >
-                {title}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </aside>
+    <ul className={styles.contents}>
+      {chapters.map(({ id, title }) => {
+        return (
+          <li
+            key={title}
+            className={styles.contents__item}
+            onClick={() => handleScroll(id)}
+          >
+            <span>{title}</span>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 

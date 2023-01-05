@@ -1,0 +1,15 @@
+@import "../../../../styles/Mixins.module.scss";
+
+.titles {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.column {
+  width: 330px;
+}
+
+.column-name {
+  @include font-size(base);
+  font-weight: 500;
+}

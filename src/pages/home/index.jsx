@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, createContext } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { format } from "date-fns";
 
 // Components
-import Filters from "./filters/Filters";
-import Days from "./days/Days";
+import Filters from "./filters";
+import Days from "./days";
 
 // Styles
 import styles from "./Home.module.scss";
@@ -12,8 +12,7 @@ import styles from "./Home.module.scss";
 // Data
 import { months } from "../../data/data";
 
-// API
-import { endpoint } from "../../api/endpoint";
+export const MyContext = createContext("");
 
 function Home() {
   const location = useLocation();
@@ -31,38 +30,41 @@ function Home() {
   }
 
   const [date, setDate] = useState({ year, month });
+  const [order, setOrder] = useState("ascending");
   const [url, setUrl] = useState(
-    `${endpoint}/archive/?order=ascending&month=${months[date.month]}&year=${
-      date.year
-    }`
+    `/archive/?order=${order}&month=${months[date.month]}&year=${date.year}`
   );
 
-  const [archive, setArchive] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const fetchDays = async (url) => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(url);
-      const archive = await response.json();
-      setArchive(archive);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchDays(url);
-  }, [url]);
+  const formattedDate = format(
+    new Date(`${date.year}-${months[date.month]}-01`),
+    "MMMM, yyyy"
+  );
 
   return (
     <main className={styles.main}>
-      <Filters date={date} setDate={setDate} setUrl={setUrl} />
-      <Days date={date} days={archive} isLoading={isLoading} />
+      <MyContext.Provider
+        value={{ date, order, formattedDate, setDate, setUrl, setOrder }}
+      >
+        <Top formattedDate={formattedDate} />
+        <Filters />
+        <Days url={url} />
+      </MyContext.Provider>
     </main>
+  );
+}
+
+function Top({ formattedDate }) {
+  return (
+    <section className={styles.top}>
+      <h1 className={styles.title}>{formattedDate}</h1>
+      <div className={styles["text-container"]}>
+        <p className={styles.text}>
+          Discover the cosmos! Each day a different image or photograph of our
+          fascinating universe is featured, along with a brief explanation
+          written by a professional astronomer.
+        </p>
+      </div>
+    </section>
   );
 }
 

@@ -18,9 +18,20 @@ option {
   font-family: "Inter", sans-serif;
 }
 
+h1,
+h2,
+h3,
+p,
+span,
+a,
+button,
+input,
+textarea {
+  color: $primary-text;
+}
+
 a {
   text-decoration: none;
-  color: $primary-text;
 }
 
 ul,

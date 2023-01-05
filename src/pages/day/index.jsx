@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 // Components
-import Image from "./image/Image";
-import Info from "./info/Info";
-import Recommended from "./recommended/Recommended";
+import Image from "./image";
+import Info from "./info";
+import Recommended from "./recommended";
 
 // Styles
 import styles from "./Day.module.scss";
@@ -12,7 +12,7 @@ import styles from "./Day.module.scss";
 // API
 import { endpoint } from "../../api/endpoint";
 
-const Day = () => {
+function Day() {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -41,13 +41,12 @@ const Day = () => {
 
   return (
     <main className={styles.main}>
-      <div className={styles.container}>
-        <Image pageType={data.pageType} media={data.media} title={data.title} />
-        <Info {...data} />
-      </div>
+      <Image {...data} />
+      <div className={styles.divider} />
+      <Info {...data} />
       <Recommended date={data.date} />
     </main>
   );
-};
+}
 
 export default Day;

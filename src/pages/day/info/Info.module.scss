@@ -1,40 +1,34 @@
 @import "../../../styles/Mixins.module.scss";
 
 .container {
-  @include flex-box(space-between, flex-end);
-  flex-direction: column;
-  width: 710px;
-  height: 800px;
+  @include flex-box(space-between, flex-start);
+  width: $desktop-container;
+  margin: 0 auto 40px;
 }
 
-.top {
-  @include flex-box(flex-start, flex-end);
-  flex-direction: column;
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+  margin-left: 40px;
+}
+
+.headline {
+  margin-bottom: 24px;
 }
 
 .title {
-  margin-bottom: 16px;
+  @include font-size(title);
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
-.button {
-  @include flex-center;
-  margin-bottom: 24px;
-  padding: 16px;
-  color: $primary-text;
-  border: 1px solid $primary-text;
-  transition: background-color 0.2s;
-
-  &:hover {
-    background-color: $secondary;
-  }
+.date {
+  @include font-size(label);
 }
 
-.meta-container {
-  padding: 16px 0;
-  border-top: 1px solid $primary-text;
-  border-bottom: 1px solid $primary-text;
-
-  &.last {
-    border-top: 0;
-  }
+.text {
+  @include font-size(text);
 }

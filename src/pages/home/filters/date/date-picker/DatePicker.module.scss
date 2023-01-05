@@ -1,0 +1,68 @@
+@import "../../../../../styles/Mixins.module.scss";
+@import "../../../../../styles/Variables.module.scss";
+
+.container {
+  position: absolute;
+  top: 110%;
+  width: 310px;
+  padding: 24px;
+  border: 1px solid $secondary;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.year-picker {
+  @include flex-box(space-between, center);
+}
+
+.year-picker-button {
+  @include flex-center;
+  padding: 4px;
+  border: 1px solid $secondary;
+  border-radius: 8px;
+}
+
+.year {
+  @include font-size(base);
+  font-weight: 500;
+}
+
+.months {
+  margin: 24px 0;
+}
+
+.line {
+  @include flex-box(space-between, center);
+  margin-bottom: 16px;
+}
+
+.month {
+  @include font-size(base);
+  @include box(56px, 32px);
+  @include flex-center;
+  border-radius: 4px;
+  transition: all 0.2s;
+
+  &:hover,
+  &.active {
+    color: #fff;
+    background-color: $primary;
+  }
+}
+
+.apply-button {
+  @include font-size(label);
+  font-weight: 500;
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid $secondary;
+  border-radius: 4px;
+  color: $primary;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
