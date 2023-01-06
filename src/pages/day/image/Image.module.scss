@@ -6,11 +6,11 @@
 
 .img-container {
   @include flex-center;
-  width: $desktop-container;
+  @include box($desktop-container, 600px);
 }
 
 .img {
-  max-width: 1600px;
+  max-width: $desktop-container;
   max-height: 600px;
 }
 

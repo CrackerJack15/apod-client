@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 // Components
 import EducationalLink from "./link/EducationalLink";
 
@@ -5,7 +7,7 @@ import EducationalLink from "./link/EducationalLink";
 import styles from "./Education.module.scss";
 import typography from "../../styles/Typography.module.scss";
 
-const Education = () => {
+function Education() {
   const data = [
     {
       title: "APOD in the Classroom",
@@ -70,6 +72,9 @@ const Education = () => {
 
   return (
     <main className={styles.main}>
+      <Helmet>
+        <title>Education</title>
+      </Helmet>
       <h1 className={typography.headlineLarge}>Education</h1>
       <div className={styles.inner}>
         {data.map((item) => {
@@ -78,6 +83,6 @@ const Education = () => {
       </div>
     </main>
   );
-};
+}
 
 export default Education;

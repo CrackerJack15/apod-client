@@ -3,7 +3,6 @@
 .container {
   position: relative;
   z-index: 5;
-  cursor: default;
 }
 
 .date-picker {
@@ -12,6 +11,7 @@
   padding: 10px 24px;
   border: 1px solid $secondary;
   border-radius: 4px;
+  cursor: pointer;
 
   &:focus {
     border-color: $primary;

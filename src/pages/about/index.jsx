@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 // Components
 import Acknowledgment from "./sections/acknowledgement";
 import Bookmark from "./sections/bookmark";
@@ -11,6 +13,9 @@ import styles from "./About.module.scss";
 function About() {
   return (
     <main className={styles.container}>
+      <Helmet>
+        <title>About Astronomy Picture of the Day</title>
+      </Helmet>
       <aside className={styles["table-of-contents"]}>
         <h1 className={styles.subtitle}>Table of contents</h1>
         <Contents />

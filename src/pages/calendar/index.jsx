@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useSearchParams } from "react-router-dom";
 
 // Components
@@ -33,6 +34,9 @@ const Calendar = () => {
 
   return (
     <main>
+      <Helmet>
+        <title>Calendar</title>
+      </Helmet>
       <section className={styles.pickers}>
         <Years year={date.year} setYear={onSubmit} />
         <Months month={date.month} setMonth={onSubmit} />

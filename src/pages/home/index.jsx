@@ -1,5 +1,6 @@
 import { useState, createContext } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { format } from "date-fns";
 
 // Components
@@ -42,6 +43,9 @@ function Home() {
 
   return (
     <main className={styles.main}>
+      <Helmet>
+        <title>Astronomy Picture of the Day</title>
+      </Helmet>
       <MyContext.Provider
         value={{ date, order, formattedDate, setDate, setUrl, setOrder }}
       >

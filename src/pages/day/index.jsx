@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 // Components
 import Image from "./image";
@@ -39,8 +40,15 @@ function Day() {
 
   if (error) return null;
 
+  const { highResImage, videoURL } = data?.media;
+
   return (
     <main className={styles.main}>
+      <Helmet>
+        <title>{data?.title}</title>
+        <meta property="og:description" content={data?.explanation} />
+        <meta property="og:image" content={highResImage || videoURL} />
+      </Helmet>
       <Image {...data} />
       <div className={styles.divider} />
       <Info {...data} />
