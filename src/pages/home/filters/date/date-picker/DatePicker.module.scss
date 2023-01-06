@@ -20,6 +20,15 @@
   padding: 4px;
   border: 1px solid $secondary;
   border-radius: 8px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:active {
+    border-color: $primary;
+  }
 }
 
 .year {
@@ -43,7 +52,10 @@
   border-radius: 4px;
   transition: all 0.2s;
 
-  &:hover,
+  &:hover {
+    background-color: $secondary;
+  }
+
   &.active {
     color: #fff;
     background-color: $primary;
