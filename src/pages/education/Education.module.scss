@@ -1,12 +1,25 @@
 @import "../../styles/Mixins.module.scss";
 @import "../../styles/Variables.module.scss";
 
-.main {
+.container {
   width: $desktop-container;
   margin: 40px auto;
 }
 
-.inner {
+.title {
+  @include font-size(headline);
+}
+
+.text-container {
+  width: 800px;
+  margin-top: 16px;
+}
+
+.text {
+  @include font-size(base);
+}
+
+.content-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;

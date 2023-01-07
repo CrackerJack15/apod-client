@@ -2,7 +2,7 @@
 import styles from "./Placeholder.module.scss";
 
 function Placeholder() {
-  return <div className={styles.container}></div>;
+  return <div className={styles.container} />;
 }
 
 export default Placeholder;

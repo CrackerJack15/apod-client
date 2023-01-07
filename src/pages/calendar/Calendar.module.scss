@@ -1,17 +1,20 @@
 @import "../../styles/Mixins.module.scss";
 @import "../../styles/Variables.module.scss";
 
-.pickers {
-  position: sticky;
-  top: 72px;
-  background-color: $primary;
-  z-index: 5;
+.top {
+  width: $desktop-container;
+  margin: 40px auto 0;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0 39px;
+.date-picker-container {
+  margin-top: 24px;
+}
+
+.title {
+  @include font-size(headline);
+}
+
+.calendar {
   width: $desktop-container;
-  margin: 20px auto;
+  margin: 40px auto 0;
 }

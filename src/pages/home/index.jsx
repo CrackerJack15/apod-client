@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { format } from "date-fns";
 
@@ -17,7 +17,7 @@ export const MyContext = createContext("");
 
 function Home() {
   const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const searchParams = new URLSearchParams(location.search);
 
   let year;
   let month;

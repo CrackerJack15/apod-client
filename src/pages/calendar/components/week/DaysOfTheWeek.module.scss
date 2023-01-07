@@ -4,14 +4,12 @@
 .container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 39px;
-  width: $desktop-container;
-  margin: 0 auto;
-  padding: 20px 0;
-  background-color: $primary;
+  gap: 8px;
 }
 
 .day {
-  width: 218px;
+  @include font-size(base);
+  width: 176px;
   text-align: right;
+  color: $secondary-text;
 }

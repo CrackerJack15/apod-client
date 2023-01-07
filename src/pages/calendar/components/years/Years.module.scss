@@ -2,29 +2,31 @@
 @import "../../../../styles/Variables.module.scss";
 
 .container {
-  padding: 12px 0;
-  border-top: 1px solid $secondary-text;
-  border-bottom: 1px solid $secondary-text;
   overflow-x: hidden;
+  margin-bottom: 16px;
 }
 
 .years {
   @include flex-box(flex-start, center);
-  width: $desktop-container;
-  margin: 0 auto;
   overflow-x: scroll;
   scrollbar-width: thin;
-  scrollbar-color: $secondary-text;
+  scrollbar-color: red;
 }
 
 .button {
-  @include font(20px, 24px);
-  margin-right: 64px;
-  color: $secondary-text;
-  transition: color 0.2s;
+  @include font-size(base);
+  padding: 4px 12px;
+  margin-right: 24px;
+  background-color: $gray-bg;
+  border-radius: 4px;
+  transition: all 0.2s;
 
-  &:hover,
+  &:hover {
+    background-color: $secondary;
+  }
+
   &.active {
-    color: $primary-text;
+    color: #fff;
+    background-color: $primary;
   }
 }

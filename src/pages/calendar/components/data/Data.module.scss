@@ -1,0 +1,12 @@
+@import "../../../../styles/Mixins.module.scss";
+
+.container {
+  margin-top: 24px;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}

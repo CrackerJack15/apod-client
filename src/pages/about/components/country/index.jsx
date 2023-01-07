@@ -13,7 +13,7 @@ function Info({ icon, name, link, maintainers }) {
         className={styles.country}
       >
         <span className={styles.icon}>{icon}</span>
-        <span>{name}</span>
+        {name}
       </a>
       <div>
         {maintainers?.map(({ link, name }, i) => {

@@ -2,17 +2,17 @@
 @import "../../../../styles/Variables.module.scss";
 
 .container {
-  @include flex-box(space-between, flex-start);
-  flex-direction: column;
-  width: 218px;
-}
+  @include box(176px, 108px);
+  position: relative;
 
-.img-container {
-  overflow: hidden;
+  &:hover .overlay {
+    opacity: 1;
+  }
 }
 
 .img {
-  @include box(218px);
+  @include box(176px, 108px);
+  border-radius: 4px;
   object-fit: cover;
   transition: transform 0.4s;
 
@@ -21,6 +21,27 @@
   }
 }
 
+.iframe {
+  @include box(176px, 108px);
+  border-radius: 4px;
+}
+
+.overlay {
+  @include flex-box(flex-end, flex-start);
+  @include box(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  padding: 12px;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
 .title {
-  margin: 16px 0;
+  @include font-size(label);
+  font-weight: normal;
+  color: #fff;
 }

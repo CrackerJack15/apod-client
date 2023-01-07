@@ -21,6 +21,10 @@
     background-color: $gray-bg;
   }
 
+  &:active {
+    background-color: $secondary;
+  }
+
   &.active > span {
     color: $primary;
   }

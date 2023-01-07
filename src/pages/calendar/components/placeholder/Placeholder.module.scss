@@ -2,5 +2,5 @@
 @import "../../../../styles/Variables.module.scss";
 
 .container {
-  @include box(218px);
+  @include box(176px, 108px);
 }

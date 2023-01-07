@@ -5,11 +5,15 @@ import Header from "./components/header";
 import Router from "./pages/Router";
 
 // Styles
-import "./App.module.scss";
+import "./styles/Global.module.scss";
+
+// Helpers
+import ScrollToTop from "./helpers/scrollToTop";
 
 function App() {
   return (
     <HelmetProvider>
+      <ScrollToTop />
       <Header />
       <Router />
     </HelmetProvider>

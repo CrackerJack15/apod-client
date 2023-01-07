@@ -23,11 +23,11 @@
   transition: all 0.2s;
 
   &:hover {
-    background-color: $secondary;
+    background-color: $gray-bg;
   }
 
   &:active {
-    border-color: $primary;
+    background-color: $secondary;
   }
 }
 

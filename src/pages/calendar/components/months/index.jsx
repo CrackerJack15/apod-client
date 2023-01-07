@@ -19,17 +19,17 @@ function Months({ month, setMonth }) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.inner}>
-        {monthsArray.map((item) => {
+      <div className={styles.months}>
+        {monthsArray.map(({ number, name }) => {
           return (
             <button
-              key={item.number}
+              key={number}
               className={`${styles.button} ${
-                item.number === month ? styles.active : ""
+                number === month ? styles.active : ""
               }`}
-              onClick={() => setMonth("month", item.number)}
+              onClick={() => setMonth("month", number)}
             >
-              {item.name}
+              {name}
             </button>
           );
         })}

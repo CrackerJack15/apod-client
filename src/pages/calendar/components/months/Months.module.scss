@@ -2,23 +2,29 @@
 @import "../../../../styles/Variables.module.scss";
 
 .container {
-  padding: 12px 0;
-  border-bottom: 1px solid $secondary-text;
+  overflow-x: hidden;
 }
 
-.inner {
+.months {
   @include flex-box(space-between, center);
-  width: $desktop-container;
-  margin: 0 auto;
+  overflow-x: scroll;
+  scrollbar-width: thin;
 }
 
 .button {
-  @include font(20px, 24px);
-  color: $secondary-text;
-  transition: color 0.2s;
+  @include font-size(base);
+  padding: 4px 12px;
+  margin-right: 24px;
+  background-color: $gray-bg;
+  border-radius: 4px;
+  transition: all 0.2s;
 
-  &:hover,
+  &:hover {
+    background-color: $secondary;
+  }
+
   &.active {
-    color: $primary-text;
+    color: #fff;
+    background-color: $primary;
   }
 }
